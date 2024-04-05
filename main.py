@@ -69,9 +69,9 @@ def total_binding_energy_calc(distances):
         print('There are', n, 'separations in this list')
         print('The total binding energy of the', n, 'separations is', total_binding_energy, 'J')
     # print('Number of Pairings is ', int(n_pairings))
+
     print(n_pairings)
-    
-    return total_binding_energy = sum(binding_energies_list)
+    return total_binding_energy
 
 
 #######################################################################################################################
@@ -82,11 +82,12 @@ total_binding_energy_calc(distances_list)
 # If we are given a list with an incorrect number of separations, then our calculation for the total binding energy
 # will be incorrect. For instance, 10 objects provides 27 pairings. If we have a list containing 28 pairings,
 # then we end up with a non-integer number of objects, which is impossible. We can use this information to include a
-# check within our code, that tells us if we have a reasonable number of items in our list.
-# To do this I can take
-# the equation n_pairings = (n * (n - 1)) / 2, and rearrange for n. This gives gives a quadratic equation,
-# which can be solved using the quadratic formula.
+# check within our code, that tells us if we have a reasonable number of elements in our list. Of course, it's possible
+# that we randomly end up with a list containing a reasonable number of elements; however, this check minimises the
+# chance of the code outputting the incorrect result
 
+# To do this I can take the equation: n_pairings = (n * (n - 1)) / 2, and rearrange for n.
+# This gives gives a quadratic equation (n^2 − n − 2 x n_pairings = 0), which can be solved using the quadratic formula.
 
 #######################################################################################################################
 # Stage 5 Check that the output is correct
