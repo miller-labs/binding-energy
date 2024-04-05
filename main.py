@@ -69,8 +69,9 @@ def total_binding_energy_calc(distances):
         print('There are', n, 'separations in this list')
         print('The total binding energy of the', n, 'separations is', total_binding_energy, 'J')
     # print('Number of Pairings is ', int(n_pairings))
-
     print(n_pairings)
+    
+    return total_binding_energy = sum(binding_energies_list)
 
 
 #######################################################################################################################
